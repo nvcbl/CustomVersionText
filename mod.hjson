@@ -1,17 +1,17 @@
 #the mod name as displayed in-game
-displayName: "Java Mod Template"
+displayName: "Custom Version Text"
 
 #the internal name of your mod
-name: "example-java-mod"
+name: "cvt"
 
 #your name
-author: "You"
+author: "nvcbl"
 
 #the fully qualified main class of the mod
-main: "example.ExampleJavaMod"
+main: "cvt.Main"
 
 #the mod description as seen in the mod dialog
-description: "A Mindustry Java mod template."
+description: "Changes the version text under the logo in the main menu to the text in Settings > Game > Version Text.\n\nMenu may become out of date or come from the future. this is because the code for the menu is pulled straight from the github code."
 
 #the mod version
 version: 1.0
