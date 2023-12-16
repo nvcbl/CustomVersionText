@@ -32,7 +32,7 @@ public class NewMenuFrag extends MenuFragment {
     private final Seq<MenuButton> customButtons = new Seq<>();
 
     public void createRenderer() {
-        renderer = new MenuRenderer();
+        renderer = new NewMenuRenderer();
     }
 
     public void build(Group parent){
