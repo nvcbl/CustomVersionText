@@ -12,7 +12,6 @@ public class Main extends Mod{
     public static final String defVText = "AYO THIS MF AIN'T CHANGED THE TEXT THINGY IN SETTINGS > GAME > VERSION TEXT !!!";
 
     public Main(){
-//        loadDialog();
         Events.on(ClientLoadEvent.class, e -> replaceText());
     }
 

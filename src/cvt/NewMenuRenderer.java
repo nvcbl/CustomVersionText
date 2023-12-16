@@ -45,7 +45,7 @@ public class NewMenuRenderer extends MenuRenderer {
                 UnitTypes.alpha, UnitTypes.beta, UnitTypes.gamma,
                 UnitTypes.avert, UnitTypes.obviate,
                 UnitTypes.evoke, UnitTypes.incite, UnitTypes.emanate
-        ).get((cycles % 20) - 1);
+        ).get((cycles % 18) - 1);
 
         generate();
         cache();
