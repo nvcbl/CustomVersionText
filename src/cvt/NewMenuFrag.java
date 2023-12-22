@@ -29,7 +29,7 @@ public class NewMenuFrag extends MenuFragment {
     private Table container, submenu;
     private Button currentMenu;
     private MenuRenderer renderer;
-    private final Seq<MenuButton> customButtons = new Seq<>();
+    public final Seq<MenuButton> customButtons = new Seq<>();
 
     public void createRenderer() {
         renderer = new NewMenuRenderer();
@@ -301,6 +301,21 @@ public class NewMenuFrag extends MenuFragment {
         public final Runnable runnable;
         /** Submenu shown when this button is clicked. Used instead of {@link #runnable} on desktop. */
         public final @Nullable MenuButton[] submenu;
+
+        /** Constructs a copy of a vanilla MenuButton. */
+        public MenuButton(MenuFragment.MenuButton button) {
+            icon = button.icon;
+            text = button.text;
+            runnable = button.runnable;
+
+            var buttons = new Seq<MenuButton>();
+            if (button.submenu != null){
+                for (var sub : button.submenu) {
+                    buttons.add(new MenuButton(sub));
+                }
+                submenu = buttons.items;
+            } else submenu = null;
+        }
 
         /** Constructs a simple menu button, which behaves the same way on desktop and mobile. */
         public MenuButton(String text, Drawable icon, Runnable runnable){

@@ -41,11 +41,11 @@ public class NewMenuRenderer extends MenuRenderer {
         for (int i = 0; i < cycles; i++) Mathf.random(cycles);
         flyerType = Seq.with(
                 UnitTypes.flare, UnitTypes.horizon, UnitTypes.zenith, UnitTypes.antumbra, UnitTypes.eclipse,
-                UnitTypes.mono, UnitTypes.poly, UnitTypes.mega, UnitTypes.quad,
+                UnitTypes.mono, UnitTypes.poly, UnitTypes.mega, UnitTypes.quad, UnitTypes.oct,
                 UnitTypes.alpha, UnitTypes.beta, UnitTypes.gamma,
-                UnitTypes.avert, UnitTypes.obviate,
+                UnitTypes.avert, UnitTypes.obviate, UnitTypes.quell, UnitTypes.disrupt,
                 UnitTypes.evoke, UnitTypes.incite, UnitTypes.emanate
-        ).get((cycles % 18) - 1);
+        ).get(cycles % 19);
 
         generate();
         cache();
